@@ -1,0 +1,76 @@
+\chapter{Features Extraction}
+
+  Features in Content-Based Image Retrieval are relevant informations about the underlying image. What makes that a feature is relevant is generally dependent of the problem at hand. Nevertheless one can identify several properties that features should respect in order to be considered good features. Thus features should be invariant to :
+
+  \begin{description}
+
+        \item[Affine transformation] (Rotation, Scaling, Translation...). Ideally features computed on an image would be the same whatever the location or the scale of the object in the image.
+
+        \item[Distortion] As for affine transformation features should be tolerant to small distortion.
+
+        % Voir human cognitive process for more invariance
+
+    \end{description}
+
+    We can discern between two approaches when dealing with features extraction. The first one is to rely on handcrafted features that describe elementary characteristics of the image such as the shape, the color or the texture. A major drawback of handcrafted features is their dependence to the application domain which led to another set of techniques called feature learning. Feature learning exploit training dataset to discover useful features from images. Another distinction one can make in the domain of features extraction is between global and local features.
+
+  \section{Global and Local Features}
+
+  Global features are features which are aggregated from the entire image. More formally global features can be symbolized by :
+  \[ F_j = \sum_{T_j} f \ o \ i(x) \] where \( \sum \) represent an aggregation operation (can be different that sum), T is the partitioning over which the value of \( F_j \) is computed, f account for possible weights and i(x) is the image.
+
+  As opposed to global features local features are computed by considering only a subpart of the image. Usually for an image a set of features is computed for each pixel using its neighborhood or for non-overlapping block. After this step we usually have a set \( { X_i, 0 < i < sizeimage } \) where X represent the features vector computed at the location i of the image.  A further step of summarization can also be performed. For example we might derive a distribution for \( Xi \) based on the set. As reported by Datta and all \cite{datta2008image} Local features often correspond with more meaningful image components, such as rigid objects and entities, which make association of semantics with image portions straightforward.
+
+  % Global Features :
+  % - Not robust to clutter or most geometric transformations
+  % Local features
+  % - work only on objects with a well-defined geometry (rigid or better, planar)
+
+  \section{Handcrafted Features}
+
+  \subsection{Color Features}
+
+  An example of global features that has been extensively used is color histogram that is a representation of the distribution of colors in an image. Color histograms can be useful for retrieval as long as the color pattern of interest is representative of an item throughout the dataset. It has the advantages to be robust to translation and rotation transformation. Various distance measure can then be used such as euclidean distance, histogram intersection, cosine or quadratic distances to compute the similarity between images \cite{swain1991color} \cite{hafner1995efficient} \cite{stricker1995similarity}. However color histograms suffer from obvious flaws. Thus color histogram can't be of any help to identify that a red cup and a blue cup actually represent the same object and additionally if the similarity of two images with very different scene but identical color distribution is computed using a color histogram they might be falsely judged similar. To improve color histograms efficiency joint histograms \cite{pass1999comparing}, histograms that incorporates additional information other than color, two-dimensional histograms \cite{bashkov2006effectiveness}, histogram that considers the relation between the pixel pair colors, or correlogram \cite{huang1999spatial}, a three dimensional histogram, have been investigated.
+
+  Another key issue when dealing with color features is the choice of the color that is been used (RGB, HSV, Lab-Space...) which usually depend on the special need of the application. Two aspect of colors have to be taken account here. The first is that depending on how the scene was taken (viewpoint of the camera, position of the illumination, orientation of the surface...) the color recorded might varies considerably. The second is that the human perception of color greatly changes between individuals. RGB space is one of the most popular color space and assign for each pixel a (R(x), G(x), B(x)) triplet corresponding to the additive primary colors of light (Red, Green, Blue). RGB space is an adequate choice only when there is little variations in the recording. For instance the RGB space would probably be a good choice for art painting but a bad choice for outdoor taken pictures. Indeed a color relatively close in the RGB color space might be perceived as very different from the point of view of an human. In the opponent color space colors are defined according the opponent color axes derived from the RGB values : (R-G, 2B-R-G, R+B+G). It has the advantage to isolate the brightness information on the third axis. Since humans are more sensitive to variations in brightness the two other axis could be downsampled to reduce the memory usage. Other color space have been studied and can be found in the survey of Smeulders and all \cite{smeulders2000content} or the one of Khokher and all \cite{khokher2012content}.
+
+  \subsection{Shape Features}
+
+  Shape features methods are trying to identify interesting regions in an image like edges or corners and computes features based on these regions. As a primary step scale-space detection is very often performed since it provides the way to detect interesting regions at any scale. A widely used detector is SIFT (Scale-Invariant Feature Transform) published by David Lowe in 1999 \cite{lowe2004distinctive}. SIFT extract keypoints from an image at different scale-space using Difference of Gaussians and assign an orientation to each of them to achieve invariance to image rotation. Keypoints descriptors are then computed based on their neighborhood that is for each neighborhood a orientation histogram is created. In addition several measures are taken to increase the robustness of the descriptors to changes in illumination. Improvement over SIFT have since been made especially with the Speeded Up Robust Features (SURF) detector \cite{bay2006surf} which is several times faster than SIFT and claimed by their authors to be more robust against different image transformations.
+  An other descriptor is known as Histogram of oriented gradients. The idea behind histogram of oriented gradients is that object or human can be described by the distribution of oriented gradients. In this techniques the image is divided into cells (grouping of adjacent pixels) of circular or rectangular shape. For each pixels gradient orientation is computed and then for each cell histogram of gradients orientation are deduced. Each pixel in a cell contribute to the histogram depending generally on the magnitude of the gradient. To account for illumination changes and shadowing, gradients in a region (grouping of several cells), are normalized with the average intensity of the region. HOG descriptor is then the concatenated vector of all the normalized histograms. It has been investigated for instance for human detection \cite{dalal2005histograms}.
+  Other techniques include harris corner detector \cite{harris1988combined} or the Hough Transform \cite{ballard1981generalizing}.
+
+  \subsection{Texture Features}
+
+   Texture can be defined as homogeneous regions in images that do not result only from uniqueness in color but from identical structural arrangements or repetitive patterns within that region. For instance the bark of threes might have different colors between species or depending on the season but they form a same texture. Bricks, parquets or grass are other examples of textures. Detecting texture is important because they often provide strong semantic interpretation.
+
+   According to different surveys, Khokher and all \cite{khokher2012content}, Haralick and all \cite{haralick1979statistical}, texture features can be divided into two main categories : \textit{Structured Approach} and \textit{Statistical Approach}.
+   In the structured approach the image is seen as a set of primitive texels with a regular or repeated pattern.
+   The more widely used statistical approach is based on the distribution of gray level in the image. According to Robert M. Hawlick \cite{haralick1979statistical} statistical approach can be divided between height different techniques : autocorrelation functions, optical transforms, digital transforms, textural edgeness, structural elements, spatial gray tone cooccurrence probabilities, gray tone run lengths, and autoregressive models. A explanation for each of these techniques is provided in the survey. Wavelet-based features have also received wide attention. In the work by Minh N. Do and all \cite{do2002wavelet} wavelet features are used in combination with Kullback-Leibler distance for texture retrieval. Gabor filters have also been investigated for texture features \cite{grigorescu2002comparison}.
+
+  %  Also model-based texture
+   %
+  %   Markov fields
+  %   fractals
+
+  \section{Shallow methods}
+
+    Shallow method refer here to techniques used in order to extract meaningful representation using features descriptors described above. Shallow is used in opposition to deep methods that involve several layers of features extraction.
+
+    \subsection{Visual Bag-of-Word}
+
+    The visual bag-of-words method in computer vision is analogous to the bag-of-words model for document. For a document the bag-of-word is a vector (i.e. histogram) that contain the number of occurrence of words that are defined by a vocabulary. For an image a bag of word is a vector or histogram that contain the number of occurrence of visual words. Visual words correspond to representative vectors computed from local image features. The main steps of the method are :
+
+    \begin{description}
+      \item[Local features Extraction] For this step different detectors such as harris detector or SIFT can be used and have been effectively investigated.
+
+      \item[Encoding in a Codebook] From the local features codewords (analogous to words) have to been found that will produce the codebook (analogous to a dictonary). The simplest method is to perform a k-means clustering over the entire features with cluster centers corresponding to codewords. Other methods to cluster the vector space are Square-error partitioning algorithms or Hierarchical techniques.
+
+      \item[Bag of keypoints construction] Once the codebook has been determined we can construct for each image an histogram (called here bag of keypoints) that contain the number of vectors assigned to each codewords (i.e. cluster centers).
+    \end{description}
+
+    More detailed explanation about the bag-of-words model can be found in the paper by Csurka and all \cite{csurka2004visual} that introduced the method in 2004. Since then more encoding methods such as locality-constrained linear encoding, improved Fisher encoding, super vector encoding or kernel codebook encoding have been proposed to improve the model.
+
+    \subsection{Improved Fisher Kernel}
+
+    The Fisher Kernel was introduced by Jaakkola and Haussler \cite{jaakkola1999exploiting}. The Fisher Kernel combines the benefits of generative and discriminative approaches by deriving a kernel from a generative model of the data. In the case of images it consist in characterizing local patch descriptors by its deviation from a Gaussian Mixture Model. Thus the Improved Fisher Kernel extend the BoW representation by including not only statistical counts of visual words but also additional informations about the distribution of descriptors.  However in practice results obtained with the Improved Fisher Kernel has not been better that with BoW model \cite{perronnin2010improving}. Comparison of these two shallow methods can be found in the work of Chatfield and all \cite{chatfield2011devil}.

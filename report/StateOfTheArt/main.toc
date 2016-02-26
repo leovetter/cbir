@@ -1,0 +1,58 @@
+\contentsline {chapter}{\numberline {1}CBIR Overview}{3}
+\contentsline {section}{\numberline {1.1}Introduction}{3}
+\contentsline {section}{\numberline {1.2}Real World Applications}{4}
+\contentsline {section}{\numberline {1.3}Components of CBIR systems}{5}
+\contentsline {subsection}{\numberline {1.3.1}Database Management}{6}
+\contentsline {subsection}{\numberline {1.3.2}Query Specification}{7}
+\contentsline {subsection}{\numberline {1.3.3}Relevance Feedback}{7}
+\contentsline {chapter}{\numberline {2}Segmentation}{8}
+\contentsline {section}{\numberline {2.1}Clustering methods}{8}
+\contentsline {section}{\numberline {2.2}Histogram-based methods}{9}
+\contentsline {section}{\numberline {2.3}Region-growing methods}{9}
+\contentsline {section}{\numberline {2.4}Graph partitioning methods}{9}
+\contentsline {subsection}{\numberline {2.4.1}Cut Criterion}{9}
+\contentsline {subsection}{\numberline {2.4.2}Graphical Probabilistic Model}{10}
+\contentsline {chapter}{\numberline {3}Features Extraction}{11}
+\contentsline {section}{\numberline {3.1}Global and Local Features}{11}
+\contentsline {section}{\numberline {3.2}Handcrafted Features}{12}
+\contentsline {subsection}{\numberline {3.2.1}Color Features}{12}
+\contentsline {subsection}{\numberline {3.2.2}Shape Features}{13}
+\contentsline {subsection}{\numberline {3.2.3}Texture Features}{13}
+\contentsline {section}{\numberline {3.3}Shallow methods}{14}
+\contentsline {subsection}{\numberline {3.3.1}Visual Bag-of-Word}{14}
+\contentsline {subsection}{\numberline {3.3.2}Improved Fisher Kernel}{15}
+\contentsline {chapter}{\numberline {4}Convolutional Neural Network}{16}
+\contentsline {section}{\numberline {4.1}Design}{17}
+\contentsline {subsection}{\numberline {4.1.1}Convolutional Layers}{17}
+\contentsline {subsection}{\numberline {4.1.2}Pooling Layers}{18}
+\contentsline {subsection}{\numberline {4.1.3}Local Response Normalization Layer}{19}
+\contentsline {subsection}{\numberline {4.1.4}Fully Connected\GenericError {(inputenc) }{Package inputenc Error: Unicode char \u 8:  not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}Layers}{19}
+\contentsline {subsection}{\numberline {4.1.5}Loss Layer}{20}
+\contentsline {section}{\numberline {4.2}Training}{20}
+\contentsline {subsection}{\numberline {4.2.1}Backpropagation and Gradient Descent}{20}
+\contentsline {subsection}{\numberline {4.2.2}L1 and L2 regularization}{22}
+\contentsline {subsection}{\numberline {4.2.3}batch normalization}{22}
+\contentsline {subsection}{\numberline {4.2.4}Dropout}{22}
+\contentsline {section}{\numberline {4.3}Research Trends}{23}
+\contentsline {subsection}{\numberline {4.3.1}Convolutional Network Architecture}{23}
+\contentsline {subsection}{\numberline {4.3.2}Supervised Pre-training}{24}
+\contentsline {chapter}{\numberline {5}Features Interpretation}{25}
+\contentsline {section}{\numberline {5.1}Similarity Measure}{25}
+\contentsline {subsection}{\numberline {5.1.1}Fixed Measure}{25}
+\contentsline {subsection}{\numberline {5.1.2}Similarity Learning}{26}
+\contentsline {section}{\numberline {5.2}Ontology}{26}
+\contentsline {section}{\numberline {5.3}Machine Learning}{27}
+\contentsline {chapter}{\numberline {6}Evaluation of CBIR System}{28}
+\contentsline {section}{\numberline {6.1}Datasets}{28}
+\contentsline {subsection}{\numberline {6.1.1}Pascal Voc}{28}
+\contentsline {subsection}{\numberline {6.1.2}Caldech}{28}
+\contentsline {subsection}{\numberline {6.1.3}ImageNet}{29}
+\contentsline {section}{\numberline {6.2}Tasks Evaluated}{29}
+\contentsline {subsection}{\numberline {6.2.1}Image Classification}{29}
+\contentsline {subsection}{\numberline {6.2.2}Object Detection}{29}
+\contentsline {subsection}{\numberline {6.2.3}Image Similarity}{29}
+\contentsline {subsection}{\numberline {6.2.4}Multi-class Image Segmentation and Labeling}{30}
+\contentsline {section}{\numberline {6.3}Evaluation Metrics}{30}
+\contentsline {subsection}{\numberline {6.3.1}Precision and Recall}{30}
+\contentsline {subsection}{\numberline {6.3.2}Top-k Error}{30}
+\contentsline {subsection}{\numberline {6.3.3}Confusion Matrix}{31}

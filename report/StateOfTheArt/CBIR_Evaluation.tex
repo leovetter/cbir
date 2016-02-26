@@ -1,0 +1,74 @@
+\chapter{Evaluation of CBIR System}
+
+  In order to evaluate between the different systems that have been proposed for Content-Based Image Retrieval researcher need common images databases with trustworthy ground truth and well defined metrics. We will review here some of the well established dataset used for this purpose as well as the different tasks that are evaluated.
+
+\section{Datasets}
+
+  \subsection{Pascal Voc}
+
+    The Pascal Visual Object Classes (VOC) Challenge consists of two components : a publicly available dataset and an annual competition. The dataset consist of annotated consumer photographs collected from the flickr photo-sharing website. In total 500,000 images were retrieved from flickr and divided between 20 classes. For each of the 20 classes images were retrieved by querying flickr with a number of related keywords and randomly choosing an image among the 100,000 first results. The process was repeated until sufficient images were collected. In order to evaluate the detection challenge a bounding box was further added for every object in the target set of object classes.
+
+  \subsection{Caldech}
+
+    The goal of the Caldech dataset is to provide with relevant images for performing multi-class object detection. Caldech 101 dataset provide pictures of object belonging to 101 categories with most of the categories having 50 images. Thus the resulting training is relatively small compared to other datasets. Each image contains only a single object. A common criticism of this dataset, is that the images are largely without clutter, variation in pose is limited, and the images have been manually aligned to reduce the variability in appearance. Caldech 256 correct some disadvantages of the previous dataset by more than doubling the number of class and introducing a large number of clutter images.
+
+  \subsection{ImageNet}
+
+  ImageNet is an image database organized according to the WordNet hierarchy that is each meaningful concept is possibly described by multiple words or word phrases and is called a \textit{synonym set} or \textit{synset}. ImageNet is comprised of more of 100,000 synsets with on average 1000 images for each synset. The ImageNet dataset has been created especially for deep learning methods that need huge amount of training data.
+
+\section{Tasks Evaluated}
+
+  % For each task give definition and real examples. What distingue this different task.
+  % When processing images content for CBIR purpose one can discern between different tasks that are performed.
+
+  % For each task
+    % definition
+    % examples
+    % process
+
+  % \section{Object Recognition}
+  \subsection{Image Classification}
+
+    One common task is to discern between different classes which one correspond to a given image. It is called Image Classification and is often relying on the presence or not of a specific object in the image such as a car, a plane, a bicycle and so on. Performing such task can be useful to answer to a query of the type \say{Find pictures with a red car}. To achieve Image Classification a commonly used approach is to compute local features of the image, summarize them into an histogram which is given as input to a classifier \cite{everingham2010pascal}. This approach is know as bag-of-visual-word in analogy with the bag-of-words (BOW) used for text representation. Within the approach different features extractors (SIFT descriptor, Harris descriptor...) and different classifiers (SVM, Earth Mover’s Distance kernel...)have been investigated \cite{csurka2004visual}
+    \cite{zhang2007local} \cite{lowe2004distinctive}. New trends also perform classification using Convolutional Neural Network who achieved best performance on several benchmarks especially on the ImageNet database.
+
+    % Is the object present in the image ? (Also called Image Classification)
+
+  \subsection{Object Detection}
+
+    Object Detection consist to assess if an object is present in a given image and to identify its location. A very widespread method to achieve Object Detection is to use a sliding window on the image. Features are computed from the window and given to a classifier to compute evaluate if the object is present. The window is slid throughout the image at different scale and for each scale and location the classifier is applied \cite{viola2004robust} \cite{dalal2005histograms}.
+
+  \subsection{Image Similarity}
+
+    Image Similarity purpose is to assess if images, commonly stored in a database, are similar to a query image. The most similar images can then be returned in answer to the query. Image similarity is typically performed by reverse search engines. The process to achieve Image Similarity is first to extract features from the images. Then a similarity measure is used to compute the similarity between the images. Similarity measure can be computed with distance metrics such as euclidean distance or with more advanced techniques relying on machine learning to learn a similarity function \cite{chechik2010large}.
+
+  \subsection{Multi-class Image Segmentation and Labeling}
+
+    Multi-class Image Segmentation and Labeling consist in assigning to each pixel a class label. First step here is usually to perform a segmentation on the image and to aggregate similar pixels into groups. Secondly a label is chosen for each group. Probabilistic graphical models have been successfully applied for this kind of task. 
+
+
+  \section{Evaluation Metrics}
+
+    \subsection{Precision and Recall}
+
+    Probably the most common evaluation measures used in information retrieval are precision and recall. Precision is the fraction of retrieved items that are relevant to the query : \[ precision = \dfrac{\abs{relevant documents \cap retrieved documents}}{retrieved documents} \]
+    \\
+    Recall is the fraction of relevant items that are retrieved : \[ recall = \dfrac{\abs{relevant documents \cap retrieved documents}}{relevant documents} \]
+    \\
+    Precision and recall are often presented through a precision versus recall graph.
+    Based on these two metrics several other have been derived that bring additional informations and make up for their inadequacy in some cases. For instance when performing retrieval with huge quantity of documents recall is not any more a relevant metric as the query might have thousand of relevant documents.
+
+    \begin{description}
+      \item[Precision at k] Precision at rank k correspond to the number of relevant results in the first k documents.
+      \item[Average Precision] For one query average precision is the average of the precision computed over an interval rank.
+      \item[Mean Average Precision] For a set of queries mean average precision is the mean of the average precision scores for each query.
+      \item[F-score] The F-score is a weighted average of the precision and recall defined as \( 2*\dfrac{precison*recall}{precision+recall}\) where 1 is the best value and 0 the worst.
+    \end{description}
+
+    \subsection{Top-k Error}
+
+    The Top-k error rate is useful to evaluate classification tasks. It is defined as the fraction of items where the correct label is not among the k labels considered the most probable by the model. In the Imagenet classification challenge the top-1 and the top-5 error rates are used as benchmarks to compare the different submissions.
+
+    \subsection{Confusion Matrix}
+
+    To evaluate the performance of a classification system a confusion matrix, also known as a contingency table, is often used. The name \textit{confusion} come from the fact that the matrix enable us to easily check if the system is confusing different classes. A confusion matrix compute the rate of true positive and true negative also know as sensitivity and specificity. For a binary classification test sensitivity measure the proportion of positives that are correctly identified as such while specificity measure the proportion of negatives that are correctly identified as such.

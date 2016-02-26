@@ -1,0 +1,28 @@
+{
+  "name": "CBIR",
+  "version": "0.0.0",
+  "homepage": "https://github.com/brwr/thinkster-django-angular-boilerplate",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-file-upload-shim": "*",
+    "angular": "*",
+    "ng-file-upload": "*",
+    "angular-route": "*",
+    "angular-cookies": "*",
+    "bootstrap": "*",
+    "bootstrap-material-design": "*",
+    "jquery": "*",
+    "ngDialog": "*",
+    "underscore": "*",
+    "angular-filter": "*",
+    "angular-resource": "*",
+    "angular-mocks": "*"
+  }
+}

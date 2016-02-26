@@ -1,0 +1,51 @@
+\chapter{Segmentation}
+
+  As humans we often attribute the semantic of an image based only on a particular region of this image disregarding the rest of the scene. Therefore it is logic when trying to learn good representation of the image to first select meaningful regions by segmentation of the image. Good segmentation should group into regions pixels with similar characteristic such as color or texture. Below is a review of different techniques that have been investigated to perform segmentation.
+
+  \section{Clustering methods}
+
+  One way to achieve image segmentation is through clustering method. The most basic case would be to use a simple k-means algorithm. In this case the main steps to perform segmentation are :
+
+  \begin{description}
+    \item[1] Choose k clusters (e.g. pixels) either randomly or based on some heuristic
+    \item[2] Based on a distance measure assign each pixel in the image to the closest cluster
+    \item[3] Recompute the cluster centers
+    \item[4] Repeat step 2 and 3 until convergence that is no more pixels change of cluster.
+  \end{description}
+
+  Improvement upon this simple scheme is to use fuzzy clustering. In fuzzy clustering pixels, rather than belonging completely to just one cluster, has a degree of membership. Further improvement is achieved by adding spatial information to the membership function as in the fuzzy c-means clustering proposed by Chuang and all \cite{chuang2006fuzzy}. Indeed their finale membership function take into account features of the pixels and also neighboring information. Hence the probability to belong to a cluster will be higher for a pixel if the neighboring pixels already belong to this cluster. Fuzzy c-Means clustering is also explored by Ahmed and all \cite{ahmed2002modified} for segmentation of magnetic resonance imaging.
+
+  \section{Histogram-based methods}
+
+  The principle of histogram-based methods for image segmentation is first to compute an histogram from the image. Then one or many thresholds are chosen between two peaks of the histogram and pixels of the image are attributed into clusters according to these thresholds. These techniques is for example used by Arifin and all \cite{arifin2004image} to distinguish between the foreground and background of grayscale image. Refinement of this technique is to recursively apply the histogram computation and the thresholding to subregions as explained in detail in the work of Ohlander and all \cite{ohlander1978picture}.
+
+  \section{Region-growing methods}
+
+  In Region-growing methods we start with elementary regions, either all pixels or a subset of pixels, and we iteratively combine these small regions based on a statistical test to decide or not of the merging. A recent algorithm that follow this approach is Statistical Region Merging proposed by Richard Nock and Frank Nielsen \cite{nock2004statistical}. Their algorithm is based on a model of image generation which captures the idea that grouping is an inference problem. It provide a simple merging predicate and a simple ordering in merges. They argue their method can cope with significant noise corruption, handle occlusions, and perform scale-sensitive segmentations.
+  Another method is the seeded region growing method. This method take a set of seeds as input along with the image which correspond to the objects to be segmented. Then the regions are iteratively grown by comparing unallocated neighboring pixels to the regions. One way of comparison could be for example to compare the intensity of a pixel with the average intensity of the region.
+
+  \section{Graph partitioning methods}
+
+  Graph partitioning methods have been lately the main research direction for segmenting images. These methods see an image as a weighted undirected graph \( G = (V,E) \) where each node \( v \in V \) correspond to a pixel or a group of pixels and each edge \( (i, j) \in E \) is weighted according to the dissimilarity between the two pixels that are linked.
+
+  \subsection{Cut Criterion}
+
+   In order for the graph image to be partitioned into relevant clusters good cut criterions must be found. A cut in graph theoretic is the partitioning of the graph into two disjoint subset which are judged dissimilar. The degree of dissimilarity is basically computed by doing the sum of the vertices that connect the two subsets : \[ Cut(I, J) = \sum_{i \in I, j \in J} w(i, j) \] where w is a function used to estimate the similarity between two nodes/pixels. The problem of this metric is that it tends to create clusters composed of a unique node. A popular criterion for finding good clusters is know as normalized cut \cite{shi2000normalized}. To avoid the unique node bias normalized cut suggest to normalize the cut criterion by the total edge weights of all the nodes in the graph. Other criterions are minimal cut \cite{wu1993optimal} (a cut is minimum if we can't find in the graph a cut with smaller weight) or maximum cut (No cut with a biggest cut weight). Yet an other recent variant is the Multiscale Normalized Cuts (NCuts) approach of Cour et al. \cite{cour2005spectral}.
+
+  \subsection{Graphical Probabilistic Model}
+
+  In an image pixels in homogeneous regions often share some properties (they have the same color or the same texture for instance). Markov Random Field is a probabilistic framework that enable to capture such contextual informations.
+  In a Markov Random Field for image segmentation observational field correspond to pixels and the goal is to assign a class label to each pixel. Thus the function the model is trying to maximize is the probability of identifying a label scheme given some features. Roughly the steps involved in the segmentation of an image thanks to a markov random fields are the following :
+
+  \begin{description}
+    \item[Features Extraction] Features are computed for each pixels.
+    \item[Initial Probabilities] Based on the features extracted initial probabilities of belonging to the class labels are computed.
+    \item[Parameters estimation] Based on training samples parameters statistic (mean and variance) are computed for each label.
+    \item[Marginal distribution] Probabilities of features given a label are computed using Baye's theorem and parameters computed previously.
+    \item[Class label Probability] Taking account its neighborhood probabilities of class labels for each pixel are computed
+    \item[Iteration] Iterate over new prior probabilities and redefine clusters to maximize these probabilities. When probability is maximized and labeling scheme does not change the iterations stop.
+  \end{description}
+
+  Demonstration of segmentation with markov random fields can be found in the work of Won and all \cite{won1992unsupervised} or the one of Zhang and all \cite{zhang2001segmentation} which use the model to segment brain magnetic resonance (MR) images.
+
+  As alternative to markov random fields conditional random fields have also been investigated. In the work of Plath and all \cite{plath2009multi} it is used to perform scale-space segmentation with class assignment.

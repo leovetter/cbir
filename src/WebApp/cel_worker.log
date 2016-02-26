@@ -1,0 +1,21 @@
+[2015-12-14 19:10:25,867: INFO/MainProcess] Connected to redis://localhost:6379//
+[2015-12-14 19:10:25,881: INFO/MainProcess] mingle: searching for neighbors
+[2015-12-14 19:10:26,892: INFO/MainProcess] mingle: all alone
+[2015-12-14 19:10:26,972: WARNING/MainProcess] /Users/leo/anaconda/envs/ImgRet/lib/python3.5/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2015-12-14 19:10:26,972: WARNING/MainProcess] celery@leo-2.local ready.
+[2015-12-14 19:10:34,719: INFO/MainProcess] Received task: fit[16cbfd91-3f17-4555-a043-66fc9711c446]
+[2015-12-14 19:10:34,723: INFO/Worker-1] fit[16cbfd91-3f17-4555-a043-66fc9711c446]: Mnist
+[2015-12-14 19:10:34,724: INFO/Worker-1] fit[16cbfd91-3f17-4555-a043-66fc9711c446]: in mnist
+[2015-12-14 19:10:36,616: INFO/Worker-1] fit[16cbfd91-3f17-4555-a043-66fc9711c446]: init MLP
+[2015-12-14 19:10:38,022: INFO/Worker-1] fit[16cbfd91-3f17-4555-a043-66fc9711c446]: jumping into fit
+[2015-12-14 19:10:38,023: WARNING/Worker-1] mlp fit
+[2015-12-14 19:10:48,346: WARNING/Worker-1] symbolic function ok
+[2015-12-14 19:10:48,346: WARNING/Worker-1] begin real training
+[2015-12-14 19:10:51,103: ERROR/MainProcess] Process 'Worker-1' pid:1482 exited with 'signal 11 (SIGSEGV)'
+[2015-12-14 19:10:51,248: ERROR/MainProcess] Task fit[16cbfd91-3f17-4555-a043-66fc9711c446] raised unexpected: WorkerLostError('Worker exited prematurely: signal 11 (SIGSEGV).',)
+Traceback (most recent call last):
+  File "/Users/leo/anaconda/envs/ImgRet/lib/python3.5/site-packages/billiard/pool.py", line 1175, in mark_as_worker_lost
+    human_status(exitcode)),
+billiard.exceptions.WorkerLostError: Worker exited prematurely: signal 11 (SIGSEGV).

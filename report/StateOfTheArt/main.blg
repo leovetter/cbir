@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: References.bib
+Repeated entry---line 120 of file References.bib
+ : @inproceedings{dalal2005histograms
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 273 of file References.bib
+ : @article{lowe2004distinctive
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 293 of file References.bib
+ : @inproceedings{dalal2005histograms
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 335 of file References.bib
+ : @article{do2002wavelet
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 356 of file References.bib
+ : @inproceedings{csurka2004visual
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 501 of file References.bib
+ : @article{datta2008image
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 512 of file References.bib
+ : @article{do2002wavelet
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 579 of file References.bib
+ : @inproceedings{ciresan2012multi
+ :                                ,
+I'm skipping whatever remains of this entry
+Warning--can't use both volume and number fields in chatfield2011devil
+Warning--can't use both volume and number fields in csurka2004visual
+You've used 64 entries,
+            2118 wiz_defined-function locations,
+            858 strings with 15528 characters,
+and the built_in function-call counts, 24970 in all, are:
+= -- 2486
+> -- 1282
+< -- 23
++ -- 510
+- -- 438
+* -- 1866
+:= -- 4065
+add.period$ -- 202
+call.type$ -- 64
+change.case$ -- 410
+chr.to.int$ -- 0
+cite$ -- 66
+duplicate$ -- 901
+empty$ -- 1837
+format.name$ -- 438
+if$ -- 5212
+int.to.chr$ -- 0
+int.to.str$ -- 64
+missing$ -- 64
+newline$ -- 323
+num.names$ -- 128
+pop$ -- 392
+preamble$ -- 1
+purify$ -- 346
+quote$ -- 0
+skip$ -- 664
+stack$ -- 0
+substring$ -- 1649
+swap$ -- 236
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 256
+warning$ -- 2
+while$ -- 245
+width$ -- 66
+write$ -- 711
+(There were 8 error messages)

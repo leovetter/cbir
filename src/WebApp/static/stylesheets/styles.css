@@ -1,0 +1,20 @@
+#img-preview {
+
+  text-align: center;
+}
+
+.row-images {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+}
+
+.col-image {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+/*div.aGraph {
+	margin-bottom: 30px;
+}*/

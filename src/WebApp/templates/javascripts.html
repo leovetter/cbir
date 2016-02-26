@@ -1,0 +1,33 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress js %}
+<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/material.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/underscore/underscore.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/ng-file-upload/ng-file-upload.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-filter/dist/angular-filter.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-resource/angular-resource.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/angular-mocks/angular-mocks.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bower_components/ngDialog/js/ngDialog.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'javascripts/controllers/controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/controllers/search_ctrl.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/controllers/train_ctrl.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/controllers/evaluation_ctrl.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/directives/directives.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/app.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'lib/D3/d3.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/LineChart.min.js' %}"></script>
+
+{% endcompress %}

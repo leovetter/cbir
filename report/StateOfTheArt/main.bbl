@@ -1,0 +1,384 @@
+\begin{thebibliography}{10}
+
+\bibitem{ahmed2002modified}
+Mohamed~N Ahmed, Sameh~M Yamany, Nevin Mohamed, Aly~A Farag, and Thomas
+  Moriarty.
+\newblock A modified fuzzy c-means algorithm for bias field estimation and
+  segmentation of mri data.
+\newblock {\em Medical Imaging, IEEE Transactions on}, 21(3):193--199, 2002.
+
+\bibitem{arifin2004image}
+Agus~Zainal Arifin and Akira Asano.
+\newblock Image thresholding by histogram segmentation using discriminant
+  analysis.
+\newblock In {\em Proceedings of Indonesia--Japan Joint Scientific Symposium},
+  pages 169--174, 2004.
+
+\bibitem{ballard1981generalizing}
+Dana~H Ballard.
+\newblock Generalizing the hough transform to detect arbitrary shapes.
+\newblock {\em Pattern recognition}, 13(2):111--122, 1981.
+
+\bibitem{bashkov2006effectiveness}
+EA~Bashkov and NS~Kostyukova.
+\newblock Effectiveness estimation of image retrieval by 2d color histogram.
+\newblock {\em Journal of Automation and Information Sciences}, 8(11):74--80,
+  2006.
+
+\bibitem{bay2006surf}
+Herbert Bay, Tinne Tuytelaars, and Luc Van~Gool.
+\newblock Surf: Speeded up robust features.
+\newblock In {\em Computer vision--ECCV 2006}, pages 404--417. Springer, 2006.
+
+\bibitem{chatfield2011devil}
+Ken Chatfield, Victor~S Lempitsky, Andrea Vedaldi, and Andrew Zisserman.
+\newblock The devil is in the details: an evaluation of recent feature encoding
+  methods.
+\newblock In {\em BMVC}, volume~2, page~8, 2011.
+
+\bibitem{chatfield2014return}
+Ken Chatfield, Karen Simonyan, Andrea Vedaldi, and Andrew Zisserman.
+\newblock Return of the devil in the details: Delving deep into convolutional
+  nets.
+\newblock {\em arXiv preprint arXiv:1405.3531}, 2014.
+
+\bibitem{chechik2010large}
+Gal Chechik, Varun Sharma, Uri Shalit, and Samy Bengio.
+\newblock Large scale online learning of image similarity through ranking.
+\newblock {\em The Journal of Machine Learning Research}, 11:1109--1135, 2010.
+
+\bibitem{chuang2006fuzzy}
+Keh-Shih Chuang, Hong-Long Tzeng, Sharon Chen, Jay Wu, and Tzong-Jer Chen.
+\newblock Fuzzy c-means clustering with spatial information for image
+  segmentation.
+\newblock {\em computerized medical imaging and graphics}, 30(1):9--15, 2006.
+
+\bibitem{ciresan2012multi}
+Dan Ciresan, Ueli Meier, and J{\"u}rgen Schmidhuber.
+\newblock Multi-column deep neural networks for image classification.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2012 IEEE
+  Conference on}, pages 3642--3649. IEEE, 2012.
+
+\bibitem{cour2005spectral}
+Timothee Cour, Florence Benezit, and Jianbo Shi.
+\newblock Spectral segmentation with multiscale graph decomposition.
+\newblock In {\em Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}, volume~2, pages 1124--1131. IEEE, 2005.
+
+\bibitem{crucianu2004relevance}
+Michel Crucianu, Marin Ferecatu, and Nozha Boujemaa.
+\newblock Relevance feedback for image retrieval: a short survey.
+\newblock {\em Report of the DELOS2 European Network of Excellence (FP6)},
+  2004.
+
+\bibitem{csurka2004visual}
+Gabriella Csurka, Christopher Dance, Lixin Fan, Jutta Willamowski, and
+  C{\'e}dric Bray.
+\newblock Visual categorization with bags of keypoints.
+\newblock In {\em Workshop on statistical learning in computer vision, ECCV},
+  volume~1, pages 1--2. Prague, 2004.
+
+\bibitem{dalal2005histograms}
+Navneet Dalal and Bill Triggs.
+\newblock Histograms of oriented gradients for human detection.
+\newblock In {\em Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}, volume~1, pages 886--893. IEEE, 2005.
+
+\bibitem{CBIR_Trends_NewAge}
+Ritendra Datta, Dhiraj Joshi, Jia Li, and James~Z. Wang.
+\newblock Image retrieval: Ideas, influences, and trends of the new age.
+\newblock {\em ACM Computing Surveys}, 40, 2008.
+
+\bibitem{datta2008image}
+Ritendra Datta, Dhiraj Joshi, Jia Li, and James~Z Wang.
+\newblock Image retrieval: Ideas, influences, and trends of the new age.
+\newblock {\em ACM Computing Surveys (CSUR)}, 40(2):5, 2008.
+
+\bibitem{do2002wavelet}
+Minh~N Do and Martin Vetterli.
+\newblock Wavelet-based texture retrieval using generalized gaussian density
+  and kullback-leibler distance.
+\newblock {\em Image Processing, IEEE Transactions on}, 11(2):146--158, 2002.
+
+\bibitem{donahue2013decaf}
+Jeff Donahue, Yangqing Jia, Oriol Vinyals, Judy Hoffman, Ning Zhang, Eric
+  Tzeng, and Trevor Darrell.
+\newblock Decaf: A deep convolutional activation feature for generic visual
+  recognition.
+\newblock {\em arXiv preprint arXiv:1310.1531}, 2013.
+
+\bibitem{everingham2010pascal}
+Mark Everingham, Luc Van~Gool, Christopher~KI Williams, John Winn, and Andrew
+  Zisserman.
+\newblock The pascal visual object classes (voc) challenge.
+\newblock {\em International journal of computer vision}, 88(2):303--338, 2010.
+
+\bibitem{fukushima1980neocognitron}
+Kunihiko Fukushima.
+\newblock Neocognitron: A self-organizing neural network model for a mechanism
+  of pattern recognition unaffected by shift in position.
+\newblock {\em Biological cybernetics}, 36(4):193--202, 1980.
+
+\bibitem{girshick2014rich}
+Ross Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik.
+\newblock Rich feature hierarchies for accurate object detection and semantic
+  segmentation.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 580--587, 2014.
+
+\bibitem{glorot2011deep}
+Xavier Glorot, Antoine Bordes, and Yoshua Bengio.
+\newblock Deep sparse rectifier neural networks.
+\newblock In {\em International Conference on Artificial Intelligence and
+  Statistics}, pages 315--323, 2011.
+
+\bibitem{grigorescu2002comparison}
+Simona~E Grigorescu, Nicolai Petkov, and Peter Kruizinga.
+\newblock Comparison of texture features based on gabor filters.
+\newblock {\em Image Processing, IEEE Transactions on}, 11(10):1160--1167,
+  2002.
+
+\bibitem{gudivada1995content}
+Venkat~N Gudivada and Vijay~V Raghavan.
+\newblock Content based image retrieval systems.
+\newblock {\em Computer}, 28(9):18--22, 1995.
+
+\bibitem{hafner1995efficient}
+James Hafner, Harpreet~S Sawhney, Will Equitz, Myron Flickner, and Wayne
+  Niblack.
+\newblock Efficient color histogram indexing for quadratic form distance
+  functions.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 17(7):729--736, 1995.
+
+\bibitem{haralick1979statistical}
+Robert~M Haralick.
+\newblock Statistical and structural approaches to texture.
+\newblock {\em Proceedings of the IEEE}, 67(5):786--804, 1979.
+
+\bibitem{harris1988combined}
+Chris Harris and Mike Stephens.
+\newblock A combined corner and edge detector.
+\newblock In {\em Alvey vision conference}, volume~15, page~50. Citeseer, 1988.
+
+\bibitem{hinton2012improving}
+Geoffrey~E Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and
+  Ruslan~R Salakhutdinov.
+\newblock Improving neural networks by preventing co-adaptation of feature
+  detectors.
+\newblock {\em arXiv preprint arXiv:1207.0580}, 2012.
+
+\bibitem{huang1999spatial}
+Jing Huang, S~Ravi Kumar, Mandar Mitra, Wei-Jing Zhu, and Ramin Zabih.
+\newblock Spatial color indexing and applications.
+\newblock {\em International Journal of Computer Vision}, 35(3):245--268, 1999.
+
+\bibitem{hubel1959receptive}
+David~H Hubel and Torsten~N Wiesel.
+\newblock Receptive fields of single neurones in the cat's striate cortex.
+\newblock {\em The Journal of physiology}, 148(3):574--591, 1959.
+
+\bibitem{hyvonen2003ontology}
+Eero Hyv{\"o}nen, Samppa Saarela, Avril Styrman, and Kim Viljanen.
+\newblock Ontology-based image retrieval.
+\newblock In {\em WWW (Posters)}, 2003.
+
+\bibitem{ioffe2015batch}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock {\em arXiv preprint arXiv:1502.03167}, 2015.
+
+\bibitem{jaakkola1999exploiting}
+Tommi Jaakkola, David Haussler, et~al.
+\newblock Exploiting generative models in discriminative classifiers.
+\newblock {\em Advances in neural information processing systems}, pages
+  487--493, 1999.
+
+\bibitem{jing2015visual}
+Yushi Jing, David Liu, Dmitry Kislyuk, Andrew Zhai, Jiajing Xu, Jeff Donahue,
+  and Sarah Tavel.
+\newblock Visual search at pinterest.
+\newblock {\em arXiv preprint arXiv:1505.07647}, 2015.
+
+\bibitem{kahn1994artificial}
+Charles~E Kahn~Jr.
+\newblock Artificial intelligence in radiology: decision support systems.
+\newblock {\em Radiographics}, 14(4):849--861, 1994.
+
+\bibitem{khokher2012content}
+Amandeep Khokher and Rajneesh Talwar.
+\newblock Content-based image retrieval: Feature extraction techniques and
+  applications.
+\newblock In {\em Conference proceedings}, 2012.
+
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
+\bibitem{lecun1989backpropagation}
+Yann LeCun, Bernhard Boser, John~S Denker, Donnie Henderson, Richard~E Howard,
+  Wayne Hubbard, and Lawrence~D Jackel.
+\newblock Backpropagation applied to handwritten zip code recognition.
+\newblock {\em Neural computation}, 1(4):541--551, 1989.
+
+\bibitem{lin2013network}
+Min Lin, Qiang Chen, and Shuicheng Yan.
+\newblock Network in network.
+\newblock {\em arXiv preprint arXiv:1312.4400}, 2013.
+
+\bibitem{lowe2004distinctive}
+David~G Lowe.
+\newblock Distinctive image features from scale-invariant keypoints.
+\newblock {\em International journal of computer vision}, 60(2):91--110, 2004.
+
+\bibitem{mezaris2003ontologies}
+V~Mezaris, I~Kompatsiaris, and MG~Strintzis.
+\newblock Ontologies for object-based image retrieval.
+\newblock In {\em Proc. Workshop Image Analysis For Multimedia Interactive
+  Services}, pages 96--101, 2003.
+
+\bibitem{muller2004review}
+Henning M{\"u}ller, Nicolas Michoux, David Bandon, and Antoine Geissbuhler.
+\newblock A review of content-based image retrieval systems in medical
+  applications—clinical benefits and future directions.
+\newblock {\em International journal of medical informatics}, 73(1):1--23,
+  2004.
+
+\bibitem{QBIC}
+W.~Niblack, R.~Barber, W.~Equitz, M.~Flickner, E.~Glasman, D.~Petkovic,
+  P.~Yanker, C.~Faloutsos, and G.~Taubin.
+\newblock The qbic project: Querying images by content using color, texture,
+  and shape.
+\newblock {\em Storage and Retrieval for Image and Video Databases}, 1908,
+  1993.
+
+\bibitem{nock2004statistical}
+Richard Nock and Frank Nielsen.
+\newblock Statistical region merging.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 26(11):1452--1458, 2004.
+
+\bibitem{ohlander1978picture}
+Ron Ohlander, Keith Price, and D~Raj Reddy.
+\newblock Picture segmentation using a recursive region splitting method.
+\newblock {\em Computer Graphics and Image Processing}, 8(3):313--333, 1978.
+
+\bibitem{pass1999comparing}
+Greg Pass and Ramin Zabih.
+\newblock Comparing images using joint histograms.
+\newblock {\em Multimedia systems}, 7(3):234--240, 1999.
+
+\bibitem{perronnin2010improving}
+Florent Perronnin, Jorge S{\'a}nchez, and Thomas Mensink.
+\newblock Improving the fisher kernel for large-scale image classification.
+\newblock In {\em Computer Vision--ECCV 2010}, pages 143--156. Springer, 2010.
+
+\bibitem{plath2009multi}
+Nils Plath, Marc Toussaint, and Shinichi Nakajima.
+\newblock Multi-class image segmentation using conditional random fields and
+  global classification.
+\newblock In {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning}, pages 817--824. ACM, 2009.
+
+\bibitem{rubner2000earth}
+Yossi Rubner, Carlo Tomasi, and Leonidas~J Guibas.
+\newblock The earth mover's distance as a metric for image retrieval.
+\newblock {\em International journal of computer vision}, 40(2):99--121, 2000.
+
+\bibitem{shi2000normalized}
+Jianbo Shi and Jitendra Malik.
+\newblock Normalized cuts and image segmentation.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 22(8):888--905, 2000.
+
+\bibitem{simonyan2014very}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em arXiv preprint arXiv:1409.1556}, 2014.
+
+\bibitem{smeulders2000content}
+Arnold~WM Smeulders, Marcel Worring, Simone Santini, Amarnath Gupta, and Ramesh
+  Jain.
+\newblock Content-based image retrieval at the end of the early years.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 22(12):1349--1380, 2000.
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
+  2014.
+
+\bibitem{stricker1995similarity}
+Markus~A Stricker and Markus Orengo.
+\newblock Similarity of color images.
+\newblock In {\em IS\&T/SPIE's Symposium on Electronic Imaging: Science \&
+  Technology}, pages 381--392. International Society for Optics and Photonics,
+  1995.
+
+\bibitem{swain1991color}
+Michael~J Swain and Dana~H Ballard.
+\newblock Color indexing.
+\newblock {\em International journal of computer vision}, 7(1):11--32, 1991.
+
+\bibitem{szegedy2015going}
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir
+  Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovich.
+\newblock Going deeper with convolutions.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 1--9, 2015.
+
+\bibitem{vailaya2001image}
+Aditya Vailaya, M{\'a}rio~AT Figueiredo, Anil~K Jain, and Hong-Jiang Zhang.
+\newblock Image classification for content-based indexing.
+\newblock {\em Image Processing, IEEE Transactions on}, 10(1):117--130, 2001.
+
+\bibitem{viola2004robust}
+Paul Viola and Michael~J Jones.
+\newblock Robust real-time face detection.
+\newblock {\em International journal of computer vision}, 57(2):137--154, 2004.
+
+\bibitem{wan2014deep}
+Ji~Wan, Dayong Wang, Steven Chu~Hong Hoi, Pengcheng Wu, Jianke Zhu, Yongdong
+  Zhang, and Jintao Li.
+\newblock Deep learning for content-based image retrieval: A comprehensive
+  study.
+\newblock In {\em Proceedings of the ACM International Conference on
+  Multimedia}, pages 157--166. ACM, 2014.
+
+\bibitem{won1992unsupervised}
+Chee~Sun Won and Haluk Derin.
+\newblock Unsupervised segmentation of noisy and textured images using markov
+  random fields.
+\newblock {\em CVGIP: Graphical Models and Image Processing}, 54(4):308--328,
+  1992.
+
+\bibitem{wu1993optimal}
+Zhenyu Wu and Richard Leahy.
+\newblock An optimal graph theoretic approach to data clustering: Theory and
+  its application to image segmentation.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 15(11):1101--1113, 1993.
+
+\bibitem{zhang2007local}
+Jianguo Zhang, Marcin Marsza{\l}ek, Svetlana Lazebnik, and Cordelia Schmid.
+\newblock Local features and kernels for classification of texture and object
+  categories: A comprehensive study.
+\newblock {\em International journal of computer vision}, 73(2):213--238, 2007.
+
+\bibitem{zhang2001segmentation}
+Yongyue Zhang, Michael Brady, and Stephen Smith.
+\newblock Segmentation of brain mr images through a hidden markov random field
+  model and the expectation-maximization algorithm.
+\newblock {\em Medical Imaging, IEEE Transactions on}, 20(1):45--57, 2001.
+
+\bibitem{zhou2003relevance}
+Xiang~Sean Zhou and Thomas~S Huang.
+\newblock Relevance feedback in image retrieval: A comprehensive review.
+\newblock {\em Multimedia systems}, 8(6):536--544, 2003.
+
+\end{thebibliography}

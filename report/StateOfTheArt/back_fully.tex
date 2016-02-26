@@ -1,0 +1,34 @@
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \vspace{-40pt}
+  \begin{center}
+    \begin{tikzpicture}[
+      roundnode1/.style={circle, draw=yellow!60, fill=yellow!5, very thick, minimum size=10mm},
+      roundnode2/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=10mm},
+      ]
+      %Nodes
+      \node[roundnode1]      (i1)                              {};
+      \node[roundnode2]        (i2)       [right=of i1] {i};
+      \node[roundnode1]        (i3)       [right=of i2] {};
+      \node[roundnode1]      (j1)       [above=20mm of i1] {};
+      \node[roundnode2]        (j2)       [above=20mm of i2] {j};
+      \node[roundnode1]        (j3)       [above=20mm of i3] {};
+      \node[roundnode1]      (k1)       [below=20mm of i1] {};
+      \node[roundnode1]        (k2)       [below=20mm of i2] {};
+      \node[roundnode1]        (k3)       [below=20mm of i3] {};
+
+      %Lines
+      \draw[->] (k1.north) -- (i2.south);
+      \draw[->] (k2.north) -- (i2.south);
+      \draw[->] (k3.north) -- (i2.south);
+      \draw[->] (i2.north) -- (j1.south);
+      \draw[->] (i2.north) -- node [midway,fill=white] { Wij } node [above=5mm,fill=white] { zj } (j2.south);
+      \draw[->] (i2.north) -- (j3.south);
+      \draw[->] (i1.north) -- (j2.south);
+      \draw[->] (i3.north) -- (j2.south);
+      \draw[->] (j2.north) -- ($ (j2.north) + (0,1) $) node [midway,fill=white] {yj} ;
+    \end{tikzpicture}
+  \end{center}
+  \caption{Fully Connected Layers}
+  \vspace{-30pt}
+  \label{back_fully}
+\end{wrapfigure}
